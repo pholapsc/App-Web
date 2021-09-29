@@ -1,5 +1,5 @@
 /*{border: 1px solid;}*/
-
+/*
 header{ 
     height:70px; 
     background-color: #5EB916;
@@ -7,11 +7,15 @@ header{
     padding: 0px 0px 0px 0px;
     display: flex; 
     justify-content: left;  
-}
+}*/
+
 header nav{
     display: flex; 
     justify-content: left;  
 }
+
+
+
 #enlaces{ width:100%; height: auto; margin:0;}
 #enlaces ul{
     list-style-type:none ; 
