@@ -103,5 +103,9 @@ body{margin:auto;}
 A{color:white; text-decoration:none;}
 
 
-
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link{
+    background: #7f1200ff !important;
+    text-decoration-color: #000000 !important;
+}
 
