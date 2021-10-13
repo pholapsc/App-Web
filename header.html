@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-    <div class="container" width="100%" height="100%">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
           <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
             <svg class="bi me-2" width="60" height="50" style="background-image: url(./img/ImagoTipo.png); background-repeat: no-repeat;  background-position: 50%; background-size: 65% auto;"></svg>
             <span class="fs-2" style="font-family:Arial, Helvetica, sans-serif;">PholapSC</span>
           </a>
-          <ul class="nav nav-pills nav-fill col-12 col-md-auto mb-2 justify-content-center mb-md-0 " id="navbarNavDropdown">
-            <li class="nav-item"><a href="index.html" class="nav-link px-1 link-dark" aria-current="page">Inicio</a></li>
-            <li class="nav-item"><a href="sesions.html" class="nav-link px-1 link-dark">Sesiones</a></li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle link-dark active" href="galery.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Galería
-                </a>
+          <ul class="nav nav-pills nav-fill col-12 col-md-auto  justify-content-center " id="navbarNavDropdown">
+            <li class="nav-item"><a id="index" href="index.html" class="nav-link px-2 link-dark" aria-current="page">Inicio</a></li>
+            <li class="nav-item"><a id="services" href="services.html" class="nav-link px-2 link-dark">Servicios</a></li>
+              <li class="nav-item galery dropdown">
+                <a id="galery" class="nav-link px-1 dropdown-toggle link-dark" href="galery.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Galería</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><a class="dropdown-item" href="#">Naturaleza</a></li>
                   <li><a class="dropdown-item" href="#">Retratos</a></li>
@@ -20,8 +17,17 @@
                   <li><a class="dropdown-item" href="#">Eventos</a></li>
                 </ul>
               </li>
-            <li class="nav-item"><a href="about.html" class="nav-link px-1 link-dark">Nosotros</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link px-1 link-dark">Contacto</a></li>
+            <li class="nav-item about"><a id="about" href="about.html" class="nav-link px-2 link-dark">Nosotros</a></li>
+            <li class="nav-item contact"><a id="contact" href="contact.html" class="nav-link px-1 link-dark">Contacto</a></li>
           </ul>
         </header>
-      </div>
+<script>
+
+      var nombre_archivo = filename();
+      document.write(nombre_archivo);
+        if (nombre_archivo == "index.html") {
+            var elemento = document.getElementById("index");
+            elemento.className += " active";
+        }
+
+</script>

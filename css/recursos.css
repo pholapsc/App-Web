@@ -1,5 +1,5 @@
-/*{border: 1px solid;}*/
-/*
+/*{border: 1px solid;}
+
 header{ 
     height:70px; 
     background-color: #5EB916;
@@ -103,16 +103,27 @@ body{margin:auto;}
 A{color:white; text-decoration:none;}
 
 
-.nav-pills .nav-link.active,
+.nav-pills .nav-link,
 .show>.nav-pills .nav-link{
-    background: #7f1200ff !important;
-    text-decoration-color: #000000 !important;
+    background-color: #fff;
+    text-decoration-color: #7e3131 !important;
+    border-radius: 40px !important;
+    border-color: black !important;
+    border-bottom-style: initial !important;
+}
+.nav-link:hover, .dropdown-item:hover{
+    background: rgba(127, 19, 0, 0.76);
+    color: #fff;
+    transform: scale(1,1);
+    border-radius: 15px;
+    transition: .15s linear!important;
 }
 
 iframe{
     border-style: none !important;
 }
 
-.container{
-
+.dropdown-toggle::after {
+    display:none;
 }
+
