@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="estilo.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>Contacto</title>
+    <title>Admisión</title>
 </head>
 <body>
     <div id="container1">
@@ -54,51 +54,43 @@
             </nav>
         </header>
 
-        <div class="container title-admision">
-            <h1>Contactos</h2>
-        </div>
-        <div class="contenedor2" role="main">
-            <div class="tarjeta">
-                <div class="arriba arriba1">
-                    <img src="" alt="">
-                    <h2>Rectorado</h2>
-                </div>
-                <div class="abajo">
-                    <p>Telefono: 0987654321
-                        Email: example@example.com
-                        Horario: 9-5pm
-                        <a href="rectorado.html">Ver mas</a>
-                    </p>
-                </div>
+        <div class="container" role="main">
+            <div class="container title-admision">
+                <h1>Admisión</h2>
             </div>
-            <div class="tarjeta">
-                <div class="arriba arriba2">
-                    <img src="" alt="">
-                    <h2>Decanato</h2>
-                </div>
-                <div class="abajo">
-                    <p>Telefono: 0987654321
-                        Email: example@example.com
-                        Horario: 9-5pm
-                        <a href="decanato.html">Ver mas</a>
-                    </p>
-                </div>
-            </div>
-            <div class="tarjeta">
-                <div class="arriba arriba3">
-                    <img src="" alt="">
-                    <h2>Subdecanato</h2>
-                </div>
-                <div class="abajo">
-                    <p>Telefono: 0987654321
-                        Email: example@example.com
-                        Horario: 9-5pm
-                        <a href="subdecanato.html">Ver mas</a>
-                    </p>
-                </div>
+            <div class="container from-1">
+                <form action="" method="get" class="form-example">
+                    <h2>Datos del Postulante</h2>
+                    <div>
+                        <label for="nombres_ID">Nombres</label>
+                        <input type="text" class="form-control" id="nombres_ID" 
+                        aria-describedby="nombres_Help" placeholder="Nombres completo">
+                    </div>
+                    <div>
+                        <label for="apellidos_ID">Apellidos</label>
+                        <input type="text" class="form-control" id="apellidos_ID"
+                        aria-describedby="nombres_Help" placeholder="Apellidos completo">
+                        <small id="nombres_Help" class="form-text text-muted">Nunca compartiremos tu información con nadie más.</small>
+                    </div>
+                    <div>
+                        <label for="cedula_ID">Cédula</label>
+                        <input type="text" class="form-control" id="cedula_ID"
+                        aria-describedby="cedulaHelp" placeholder="Número de cédula">
+                        <small id="cedulaHelp" class="form-text text-muted">Unicamente cedulas ecuatorianas.</small>
+                    </div>
+                    <div>
+                        <label for="telefono_ID">Teléfono</label>
+                        <input type="text" class="form-control" id="telefono_ID"
+                        aria-describedby="numTelfHelp" placeholder="+593 99 999 XXXX ">
+                        <small id="numTelfHelp" class="form-text text-muted">Si reside en otro país asegurese de agregar el prefjo correspondiente.</small>
+                    </div>
+                    <div class="btn-acciones">
+                        <button type="submit" class="btn btn-primary postular">Postular</button>
+                        <button type="submit" class="btn btn-primary cancelar">Cancelar</button>
+                    </div>
+                </form>
             </div>
         </div>
-
 
         <footer id="footer" class="pt-4 my-md-5 pt-md-5 border-top">
             <div class="container container-footer">
@@ -145,7 +137,7 @@
             </div>
           </footer>
 
-    </div>
 
+    </div>
 </body>
 </html>
