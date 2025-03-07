@@ -1,129 +1,140 @@
-/*{border: 1px solid;}
-
-header{ 
-    height:70px; 
-    background-color: #5EB916;
-    background-image: url(../img/sombra_03.png);
-    padding: 0px 0px 0px 0px;
-    display: flex; 
-    justify-content: left;  
-}*/
-
-header nav{
-    display: flex; 
-    justify-content: left;  
+/* Estilos para el header y navegación */
+header nav {
+    display: flex;
+    justify-content: left;
 }
 
-
-
-#enlaces{ width:100%; height: auto; margin:0;}
-#enlaces ul{
-    list-style-type:none ; 
-    width:49%; 
-    text-align:left; 
-    display: flex; 
-    justify-content: center;  
+/* Estilos para enlaces y listas */
+#enlaces {
+    width: 100%;
+    height: auto;
+    margin: 0;
 }
 
-#enlaces ul li{
-    display:inline-block; 
-    width: auto; 
-    font-family: montserrat; 
-    box-sizing: border-box; 
-    margin:auto;
+#enlaces ul {
+    list-style-type: none;
+    width: 49%;
+    text-align: left;
+    display: flex;
+    justify-content: center;
 }
 
+#enlaces ul li {
+    display: inline-block;
+    width: auto;
+    font-family: montserrat;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+/* Estilos para investigación */
 #research-interest {
-    border-color: #5EB916 
-    display: flex; 
-    justify-content: center; 
+    border-color: #5EB916;
+    display: flex;
+    justify-content: center;
 }
-#research-interest div{
+
+#research-interest div {
     margin: auto;
     border-style: groove;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 50px;
+    border-radius: 50px;
     border-width: thin;
     border-color: #5EB916;
-    
-    padding:0% 40px 2% 40px;
+    padding: 0% 40px 2% 40px;
 }
 
-section{
+/* Estilos de sección y foto */
+section {
     display: inline-block;
 }
-#foto{
-    border-radius:150px;
+
+#foto {
+    border-radius: 150px;
 }
 
-
-#izquierda{
+/* Layout columnas */
+#izquierda {
     float: left;
-    width:49%;
+    width: 49%;
     text-align: center;
 }
-#derecha{
+
+#derecha {
     width: 50%;
     float: right;
     box-sizing: content-box;
 }
-@font-face{
-	font-family:montserrat;
-	font-style:normal;
-	font-weight: normal;
-	src:url(../fonts/Montserrat-Bold.otf);
+
+/* Definición de fuentes */
+@font-face {
+    font-family: montserrat;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/Montserrat-Bold.otf);
 }
-@font-face{
-	font-family:displayLight;
-	font-style:normal;
-	font-weight: normal;
-	src:url(../fonts/sf-ui-display-light.otf);
+
+@font-face {
+    font-family: displayLight;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/sf-ui-display-light.otf);
 }
+
+/* Tipografía */
 h2 {
     font-size: 70px;
     font-family: montserrat;
     color: #5EB916;
 }
+
 h3 {
     font-size: 20px;
     font-family: displaylight;
 }
+
 p {
     height: auto;
     font-family: displayLight;
 }
 
+/* Elementos generales */
+body {
+    margin: auto;
+}
 
-body{margin:auto;}
+.colorweb {
+    background-color: #5EB916;
+}
 
-.colorweb{Background-color:#5EB916;}
+A {
+    color: white;
+    text-decoration: none;
+}
 
-A{color:white; text-decoration:none;}
-
-
+/* Estilos para navegación Bootstrap */
 .nav-pills .nav-link,
-.show>.nav-pills .nav-link{
+.show > .nav-pills .nav-link {
     background-color: #fff;
     text-decoration-color: #7e3131 !important;
     border-radius: 40px !important;
     border-color: black !important;
     border-bottom-style: initial !important;
 }
-.nav-link:hover, .dropdown-item:hover{
-    background: rgba(127, 19, 0, 0.76);
-    color: #fff;
+
+/* Estilos compartidos para hover y active */
+.footer-container,
+.nav-link:hover,
+.dropdown-item:hover,
+.nav-link:active,
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background: rgba(127, 19, 0, 0.76) !important;
+    color: #fff !important;
+    border-radius: 15px !important;
     transform: scale(1,1);
-    border-radius: 15px;
-    transition: .15s linear!important;
+    transition: .15s linear !important;
 }
 
-iframe{
+iframe {
     border-style: none !important;
 }
-
-.dropdown-toggle::after {
-    /*display:none;*/
-}
-

@@ -1,33 +1,46 @@
 <!DOCTYPE html>
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-          <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <svg class="bi me-2" width="60" height="50" style="background-image: url(./img/ImagoTipo.png); background-repeat: no-repeat;  background-position: 50%; background-size: 65% auto;"></svg>
-            <span class="fs-2" style="font-family:Arial, Helvetica, sans-serif;">PholapSC</span>
-          </a>
-          <ul class="nav nav-pills nav-fill col-12 col-md-auto  justify-content-center " id="navbarNavDropdown">
-            <li class="nav-item"><a id="index" href="index.html" class="nav-link px-2 link-dark" aria-current="page">Inicio</a></li>
-            <li class="nav-item"><a id="services" href="services.html" class="nav-link px-2 link-dark">Servicios</a></li>
-              <li class="nav-item galery dropdown">
-                <a id="galery" class="nav-link px-1 dropdown-toggle link-dark" href="galery.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Galería</a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Naturaleza</a></li>
-                  <li><a class="dropdown-item" href="#">Retratos</a></li>
-                  <li><a class="dropdown-item" href="#">Parejas</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Eventos</a></li>
-                </ul>
-              </li>
-            <li class="nav-item about"><a id="about" href="about.html" class="nav-link px-2 link-dark">Nosotros</a></li>
-            <li class="nav-item contact"><a id="contact" href="contact.html" class="nav-link px-1 link-dark">Contacto</a></li>
-          </ul>
-        </header>
+<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+  <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+    <svg class="bi me-2" width="60" height="50" style="background-image: url(./img/ImagoTipo.png); background-repeat: no-repeat;  background-position: 50%; background-size: 65% auto;"></svg>
+    <span class="fs-2" style="font-family:Arial, Helvetica, sans-serif;">PholapSC</span>
+  </a>
+  <ul class="nav nav-pills nav-fill col-12 col-md-auto  justify-content-center " id="navbarNavDropdown">
+    <li class="nav-item"><a id="index" href="index.html" class="nav-link px-2 link-dark" aria-current="page">Inicio</a></li>
+    <li class="nav-item"><a id="services" href="services.html" class="nav-link px-2 link-dark">Servicios</a></li>
+    <li class="nav-item galery dropdown">
+      <a id="galery" class="nav-link px-1 dropdown-toggle link-dark" href="galery.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Galería</a>
+      <ul class="dropdown-menu" aria-labelledby="galery">
+        <li><a class="dropdown-item" href="#">Naturaleza</a></li>
+        <li><a class="dropdown-item" href="#">Retratos</a></li>
+        <li><a class="dropdown-item" href="#">Parejas</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Eventos</a></li>
+      </ul>
+    </li>
+    <li class="nav-item about"><a id="about" href="about.html" class="nav-link px-2 link-dark">Nosotros</a></li>
+    <li class="nav-item contact"><a id="contact" href="contact.html" class="nav-link px-1 link-dark">Contacto</a></li>
+  </ul>
+</header>
 <script>
+  function filename() {
+    var rutaAbsoluta = self.location.href;
+    var posicionUltimaBarra = rutaAbsoluta.lastIndexOf("/");
+    var rutaRelativa = rutaAbsoluta.substring(posicionUltimaBarra + 1);
+    return rutaRelativa;
+  }
 
-      var nombre_archivo = filename();
-      document.write(nombre_archivo);
-        if (nombre_archivo == "index.html") {
-            var elemento = document.getElementById("index");
-            elemento.className += " active";
-        }
+  var nombre_archivo = filename();
 
+  // Marcar como activo el enlace correspondiente a la página actual
+  if (nombre_archivo == "index.html" || nombre_archivo == "") {
+    document.getElementById("index").className += " active";
+  } else if (nombre_archivo == "services.html") {
+    document.getElementById("services").className += " active";
+  } else if (nombre_archivo == "galery.html") {
+    document.getElementById("galery").className += " active";
+  } else if (nombre_archivo == "about.html") {
+    document.getElementById("about").className += " active";
+  } else if (nombre_archivo == "contact.html") {
+    document.getElementById("contact").className += " active";
+  }
 </script>
