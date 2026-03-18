@@ -1,0 +1,229 @@
+[
+  {
+    "categoria": "Bodas",
+    "paquetes": [
+      {
+        "nombre": "Básico",
+        "precio": "$139.99",
+        "caracteristicas": [
+          "20 fotos personalizadas (máximo detalle)",
+          "50 fotos edición normal",
+          "Regalo 1 retablo",
+          "2 horas",
+          "1 Fotógrafo"
+        ],
+        "linkTexto": "Reservar",
+        "linkUrl": "https://api.whatsapp.com/send?phone=593963861292&text=Me%20gustaría%20mas%20información%20sobre%20mi%20próximo%20paquete%20*Básico*%20para%20*Bodas*.",
+        "destacado": false
+      },
+      {
+        "nombre": "Estándar",
+        "precio": "$219.99",
+        "caracteristicas": [
+          "30 fotos personalizadas (máximo detalle)",
+          "60-80 fotos edición normal",
+          "Regalo 3 retablos",
+          "3 horas",
+          "1 Fotógrafo + ayudante"
+        ],
+        "linkTexto": "Reservar",
+        "linkUrl": "https://api.whatsapp.com/send?phone=593963861292&text=Me%20gustaría%20mas%20información%20sobre%20mi%20próximo%20paquete%20*Estándar*%20para%20*Bodas*.",
+        "destacado": true
+      },
+      {
+        "nombre": "Premium",
+        "precio": "$249.99",
+        "caracteristicas": [
+          "50 fotos personalizadas (máximo detalle)",
+          "120-140 fotos edición normal",
+          "Regalo 5 retablos",
+          "5 horas",
+          "2 Fotógrafos"
+        ],
+        "linkTexto": "Reservar",
+        "linkUrl": "https://api.whatsapp.com/send?phone=593963861292&text=Me%20gustaría%20mas%20información%20sobre%20mi%20próximo%20paquete%20*Premium*%20para%20*Bodas*.",
+        "destacado": false
+      }
+    ]
+  },
+  {
+    "categoria": "Eventos",
+    "paquetes": [
+      {
+        "nombre": "Básico",
+        "precio": "$99.99",
+        "caracteristicas": [
+          "15 fotos personalizadas",
+          "30 fotos edición normal",
+          "1 hora de cobertura",
+          "1 Fotógrafo"
+        ],
+        "linkTexto": "Reservar",
+        "linkUrl": "https://api.whatsapp.com/send?phone=593963861292&text=Me%20gustaría%20más%20información%20sobre%20el%20paquete%20*Básico*%20para%20*Eventos*.",
+        "destacado": false
+      },
+      {
+        "nombre": "Estándar",
+        "precio": "$149.99",
+        "caracteristicas": [
+          "25 fotos personalizadas",
+          "50 fotos edición normal",
+          "2 horas de cobertura",
+          "1 Fotógrafo"
+        ],
+        "linkTexto": "Reservar",
+        "linkUrl": "https://api.whatsapp.com/send?phone=593963861292&text=Me%20gustaría%20más%20información%20sobre%20el%20paquete%20*Estándar*%20para%20*Eventos*.",
+        "destacado": true
+      },
+      {
+        "nombre": "Premium",
+        "precio": "$199.99",
+        "caracteristicas": [
+          "40 fotos personalizadas",
+          "Todas las fotos en edición normal",
+          "4 horas de cobertura",
+          "1 Fotógrafo + Ayudante"
+        ],
+        "linkTexto": "Reservar",
+        "linkUrl": "https://api.whatsapp.com/send?phone=593963861292&text=Me%20gustaría%20más%20información%20sobre%20el%20paquete%20*Premium*%20para%20*Eventos*.",
+        "destacado": false
+      }
+    ]
+  },
+  {
+    "categoria": "Sesiones Personales",
+    "paquetes": [
+      {
+        "nombre": "Básico",
+        "precio": "$29.99",
+        "caracteristicas": [
+          "5 fotos personalizadas (máximo detalle)",
+          "5 Impresiones",
+          "30 min de sesión",
+          "1 Fotógrafo"
+        ],
+        "linkTexto": "Reservar",
+        "linkUrl": "https://api.whatsapp.com/send?phone=593963861292&text=Me%20gustaría%20más%20información%20sobre%20el%20paquete%20*Básico*%20para%20*Sesiones Personales*.",
+        "destacado": false
+      },
+      {
+        "nombre": "Estándar",
+        "precio": "$49.99",
+        "caracteristicas": [
+          "9 fotos personalizadas (máximo detalle)",
+          "1 cambio de Ropa (2 estilos diferentes)",
+          "1 Retablo y 3 Impresiones",
+          "1 hora de sesión",
+          "1 Fotógrafo + ayudante"
+        ],
+        "linkTexto": "Reservar",
+        "linkUrl": "https://api.whatsapp.com/send?phone=593963861292&text=Me%20gustaría%20más%20información%20sobre%20el%20paquete%20*Estándar*%20para%20*Sesiones Personales*.",
+        "destacado": true
+      },
+      {
+        "nombre": "Premium",
+        "precio": "$59.99",
+        "caracteristicas": [
+          "15 fotos personalizadas (máximo detalle)",
+          "Cambios a elección (dentro del tiempo)",
+          "2 Retablos y 10 Impresiones",
+          "1 h 30 min de sesión",
+          "2 Fotógrafos"
+        ],
+        "linkTexto": "Reservar",
+        "linkUrl": "https://api.whatsapp.com/send?phone=593963861292&text=Me%20gustaría%20más%20información%20sobre%20el%20paquete%20*Premium*%20para%20*Sesiones Personales*.",
+        "destacado": false
+      }
+    ]
+  },
+  {
+    "categoria": "Familiares",
+    "paquetes": [
+      {
+        "nombre": "Básico",
+        "precio": "$39.99",
+        "caracteristicas": [
+          "7 fotos personalizadas familiares",
+          "Hasta 4 miembros",
+          "45 min de sesión",
+          "1 Fotógrafo"
+        ],
+        "linkTexto": "Reservar",
+        "linkUrl": "https://api.whatsapp.com/send?phone=593963861292&text=Me%20gustaría%20más%20información%20sobre%20el%20paquete%20*Básico*%20para%20*Familiares*.",
+        "destacado": false
+      },
+      {
+        "nombre": "Estándar",
+        "precio": "$69.99",
+        "caracteristicas": [
+          "12 fotos personalizadas familiares",
+          "Hasta 6 miembros",
+          "1 Retablo mediano",
+          "1 h 15 min de sesión",
+          "1 Fotógrafo"
+        ],
+        "linkTexto": "Reservar",
+        "linkUrl": "https://api.whatsapp.com/send?phone=593963861292&text=Me%20gustaría%20más%20información%20sobre%20el%20paquete%20*Estándar*%20para%20*Familiares*.",
+        "destacado": true
+      },
+      {
+        "nombre": "Premium",
+        "precio": "$99.99",
+        "caracteristicas": [
+          "20 fotos personalizadas familiares",
+          "Miembros ilimitados",
+          "2 Retablos y 5 impresiones",
+          "2 horas de sesión",
+          "2 Fotógrafos"
+        ],
+        "linkTexto": "Reservar",
+        "linkUrl": "https://api.whatsapp.com/send?phone=593963861292&text=Me%20gustaría%20más%20información%20sobre%20el%20paquete%20*Premium*%20para%20*Familiares*.",
+        "destacado": false
+      }
+    ]
+  },
+  {
+    "categoria": "En Estudio",
+    "paquetes": [
+      {
+        "nombre": "Básico",
+        "precio": "$34.99",
+        "caracteristicas": [
+          "5 fotos editadas en alta calidad",
+          "Fondo blanco o negro",
+          "30 min de estudio",
+          "Entrega digital"
+        ],
+        "linkTexto": "Reservar",
+        "linkUrl": "https://api.whatsapp.com/send?phone=593963861292&text=Me%20gustaría%20más%20información%20sobre%20el%20paquete%20*Básico*%20para%20*En Estudio*.",
+        "destacado": false
+      },
+      {
+        "nombre": "Estándar",
+        "precio": "$54.99",
+        "caracteristicas": [
+          "10 fotos editadas en alta calidad",
+          "2 cambios de fondo/iluminación",
+          "1 hora de estudio",
+          "3 fotos impresas"
+        ],
+        "linkTexto": "Reservar",
+        "linkUrl": "https://api.whatsapp.com/send?phone=593963861292&text=Me%20gustaría%20más%20información%20sobre%20el%20paquete%20*Estándar*%20para%20*En Estudio*.",
+        "destacado": true
+      },
+      {
+        "nombre": "Premium",
+        "precio": "$89.99",
+        "caracteristicas": [
+          "20 fotos editadas en alta calidad",
+          "Múltiples fondos e iluminación creativa",
+          "2 horas de estudio con cambios de ropa",
+          "1 Retablo + 5 fotos impresas"
+        ],
+        "linkTexto": "Reservar",
+        "linkUrl": "https://api.whatsapp.com/send?phone=593963861292&text=Me%20gustaría%20más%20información%20sobre%20el%20paquete%20*Premium*%20para%20*En Estudio*.",
+        "destacado": false
+      }
+    ]
+  }
+]
