@@ -6,7 +6,7 @@ body {
 /* Premium Hero Section */
 .hero-section {
     position: relative;
-    background-image: url('../img/portfolio/Bodas/DSC_1155.jpg');
+    background-image: url('../img/portfolio/Bodas/DSC_1155.webp');
     background-size: cover;
     background-position: center 30%;
     background-repeat: no-repeat;
@@ -121,6 +121,32 @@ body {
     height: 300px;
     object-fit: cover;
     width: 100%;
+}
+
+/* Custom Premium Carousel Fade */
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-duration: 1.2s; /* Slower, more elegant fade */
+    transition-property: opacity;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-start,
+.carousel-fade .carousel-item-prev.carousel-item-end {
+    opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+    opacity: 0;
+}
+
+.carousel-fade .carousel-item img {
+    transition: transform 12s linear; /* Subtle zoom effect during fade */
+}
+
+.carousel-fade .carousel-item.active img {
+    transform: scale(1.1);
 }
 
 /* Testimonials */

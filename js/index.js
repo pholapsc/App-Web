@@ -14,24 +14,24 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
                 data = JSON.parse(text);
             } catch(e) {
-                // Mock data para probar localmente
+                // Mock data para probar localmente con las extensiones correctas (.webp)
                 data = [
-                   "img/portfolio/Bodas/DSC_1155.jpg",
-                   "img/portfolio/Bodas/DSC_1184.jpg",
-                   "img/portfolio/Retratos/intro1.jpg",
-                   "img/portfolio/Retratos/intro2.jpg",
-                   "img/portfolio/Naturaleza/nat1.jpg",
-                   "img/portfolio/Naturaleza/nat2.jpg"
+                   "img/portfolio/Bodas/DSC_1155.webp",
+                   "img/portfolio/Bodas/DSC_1186.webp",
+                   "img/portfolio/Retratos/DSC_3254.webp",
+                   "img/portfolio/Retratos/DSC_3258.webp",
+                   "img/portfolio/Naturaleza/DSC_7037.webp",
+                   "img/portfolio/Naturaleza/DSC_7061.webp"
                 ];
             }
             buildCarousels(data);
         })
         .catch(() => {
             const mockData = [
-               "img/portfolio/Bodas/DSC_1155.jpg",
-               "img/portfolio/Bodas/DSC_1184.jpg",
-               "img/portfolio/Retratos/intro1.jpg",
-               "img/portfolio/Naturaleza/nat1.jpg"
+               "img/portfolio/Bodas/DSC_1155.webp",
+               "img/portfolio/Bodas/DSC_1186.webp",
+               "img/portfolio/Retratos/DSC_3254.webp",
+               "img/portfolio/Naturaleza/DSC_7037.webp"
             ];
             buildCarousels(mockData);
         });
