@@ -9,29 +9,29 @@ document.addEventListener("DOMContentLoaded", () => {
   // Category theme map: color, icon (Bootstrap Icons), gradient
   const categoryThemes = {
     "Bodas": {
-      color: "#7f1300",
+      color: "#7F1300", // The Signature Wine Red
       icon: "bi-gem",
-      gradient: "linear-gradient(135deg, #7f1300, #a82010)"
+      gradient: "linear-gradient(135deg, #4D0B00, #7F1300)"
     },
     "Eventos": {
-      color: "#9a6c1e",
+      color: "#996515", // Antique Gold - Muted and rich
       icon: "bi-calendar-event",
-      gradient: "linear-gradient(135deg, #7a5518, #b8860b)"
+      gradient: "linear-gradient(135deg, #66440D, #996515)"
     },
     "Sesiones Personales": {
-      color: "#1c3d5a",
+      color: "#004D40", // Deep Teal - Sophisticated contrast
       icon: "bi-person-bounding-box",
-      gradient: "linear-gradient(135deg, #1c3d5a, #2a5f8f)"
+      gradient: "linear-gradient(135deg, #002620, #004D40)"
     },
     "Familiares": {
-      color: "#8b4513",
+      color: "#5D2E2E", // Deep Terracotta - Warm & grounded
       icon: "bi-people",
-      gradient: "linear-gradient(135deg, #6d3710, #a0522d)"
+      gradient: "linear-gradient(135deg, #3D1F1F, #5D2E2E)"
     },
     "En Estudio": {
-      color: "#2c3e50",
+      color: "#212121", // Deep Charcoal - Classic Pro
       icon: "bi-lightbulb",
-      gradient: "linear-gradient(135deg, #1a252f, #34495e)"
+      gradient: "linear-gradient(135deg, #000000, #212121)"
     }
   };
 
