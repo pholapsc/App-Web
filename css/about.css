@@ -1,0 +1,198 @@
+/* css/about.css */
+body {
+    background-color: #fafafa;
+}
+
+/* About Hero Section */
+.about-hero {
+    padding: 4rem 0 2rem;
+    background-color: transparent;
+    color: #333;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-hero h1 {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: rgba(127, 19, 0, 1);
+    margin-bottom: 1rem;
+}
+
+.about-hero p {
+    font-family: 'displayLight', sans-serif;
+    color: #555;
+    font-size: 1.25rem;
+}
+
+/* Bio Section */
+.bio-section {
+    padding: 2rem 0 5rem;
+}
+
+.bio-image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(127, 19, 0, 0.15);
+}
+
+.bio-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.bio-image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.bio-content {
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bio-title {
+    font-family: 'montserrat', sans-serif;
+    color: rgba(127, 19, 0, 1);
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.bio-text {
+    font-family: 'displayLight', sans-serif;
+    color: #444;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.bio-names {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    border-left: 4px solid rgba(127, 19, 0, 1);
+    padding-left: 1rem;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+    background-color: #fff;
+    padding: 5rem 0;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.philosophy-title {
+    font-family: 'montserrat', sans-serif;
+    color: #333;
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.philosophy-title::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: rgba(127, 19, 0, 1);
+    bottom: -15px;
+    left: 25%;
+    border-radius: 2px;
+}
+
+.philosophy-card {
+    padding: 2rem;
+    background: #fafafa;
+    border-radius: 15px;
+    height: 100%;
+    transition: background 0.3s ease;
+}
+
+.philosophy-card:hover {
+    background: #f0f0f0;
+}
+
+.philosophy-icon {
+    font-size: 3rem;
+    color: rgba(127, 19, 0, 1);
+    margin-bottom: 1.5rem;
+}
+
+.philosophy-card h4 {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.philosophy-card p {
+    font-family: 'displayLight', sans-serif;
+    color: #666;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 991px) {
+    .bio-content {
+        padding-left: 0;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 3rem 0 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+    .about-hero p {
+        font-size: 1rem;
+    }
+    .bio-section {
+        padding: 1rem 0 3rem;
+    }
+    .bio-title {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    .bio-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+    .bio-names {
+        font-size: 1rem;
+    }
+    .philosophy-section {
+        padding: 3rem 0;
+    }
+    .philosophy-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .philosophy-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .philosophy-card {
+        padding: 1.5rem;
+    }
+    .philosophy-card h4 {
+        font-size: 1.1rem;
+    }
+    .philosophy-card p {
+        font-size: 0.9rem;
+    }
+}

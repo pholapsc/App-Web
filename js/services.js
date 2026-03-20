@@ -3,7 +3,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!contenedor) return;
 
-  fetch("paquetes.json")
+  // Use the global basePath set by each HTML page
+  var base = (typeof basePath !== 'undefined') ? basePath : '';
+
+  // Category theme map: color, icon (Bootstrap Icons), gradient
+  const categoryThemes = {
+    "Bodas": {
+      color: "#7f1300",
+      icon: "bi-gem",
+      gradient: "linear-gradient(135deg, #7f1300, #a82010)"
+    },
+    "Eventos": {
+      color: "#9a6c1e",
+      icon: "bi-calendar-event",
+      gradient: "linear-gradient(135deg, #7a5518, #b8860b)"
+    },
+    "Sesiones Personales": {
+      color: "#1c3d5a",
+      icon: "bi-person-bounding-box",
+      gradient: "linear-gradient(135deg, #1c3d5a, #2a5f8f)"
+    },
+    "Familiares": {
+      color: "#8b4513",
+      icon: "bi-people",
+      gradient: "linear-gradient(135deg, #6d3710, #a0522d)"
+    },
+    "En Estudio": {
+      color: "#2c3e50",
+      icon: "bi-lightbulb",
+      gradient: "linear-gradient(135deg, #1a252f, #34495e)"
+    }
+  };
+
+  // Default theme for unknown categories
+  const defaultTheme = {
+    color: "#7f1300",
+    icon: "bi-camera",
+    gradient: "linear-gradient(135deg, #7f1300, #a82010)"
+  };
+
+  fetch(base + "paquetes.json")
     .then(response => {
       if (!response.ok) {
         throw new Error("No se pudo cargar paquetes.json");
@@ -22,15 +61,22 @@ document.addEventListener("DOMContentLoaded", () => {
     let html = "";
 
     categorias.forEach(categoria => {
+      const theme = categoryThemes[categoria.categoria] || defaultTheme;
+
       html += `
-      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <h1 class="display-4">${categoria.categoria}</h1>
-        <div class="card-deck mb-3 text-center">
+      <div class="category-section mb-5" style="--cat-color: ${theme.color}; --cat-gradient: ${theme.gradient};">
+        <div class="category-banner" style="background: ${theme.gradient};">
+          <div class="container text-center">
+            <i class="bi ${theme.icon} category-banner-icon"></i>
+            <h2 class="category-banner-title">${categoria.categoria}</h2>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row pt-4 justify-content-center">
       `;
 
       categoria.paquetes.forEach(paquete => {
-        // Determinar qué clase de botón usar según si es destacado o no
-        const btnClass = paquete.destacado ? "btn-outline-primary" : "btn-primary";
+        const destacCls = paquete.destacado ? "destacado" : "";
         
         let lis = "";
         paquete.caracteristicas.forEach(caract => {
@@ -38,24 +84,27 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         html += `
-          <div class="card mb-4 box-shadow">
-            <div class="card-header">
-              <h4 class="my-0 font-weight-normal">${paquete.nombre}</h4>
-            </div>
-            <div class="card-body d-flex flex-column">
-              <h1 class="card-title pricing-card-title">${paquete.precio}</h1>
-              <ul class="list-unstyled mt-3 mb-4 flex-grow-1">
-                ${lis}
-              </ul>
-              <button type="button" class="btn btn-lg btn-block ${btnClass} mt-auto" onclick="window.location='${paquete.linkUrl}'">
-                ${paquete.linkTexto}
-              </button>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="plan-card ${destacCls}" style="--cat-color: ${theme.color};">
+              <div class="plan-card-header" style="background: ${destacCls ? theme.gradient : '#f8f9fa'}; ${destacCls ? 'color: white;' : ''}">
+                <h4 class="plan-card-title">${paquete.nombre}</h4>
+              </div>
+              <div class="plan-card-body">
+                <div class="plan-price">${paquete.precio}</div>
+                <ul class="list-unstyled plan-features">
+                  ${lis}
+                </ul>
+                <button type="button" class="btn btn-plan mt-auto w-100" style="background-color: ${theme.color}; color: #fff; border: 2px solid ${theme.color};" onmouseover="this.style.opacity='0.85'; this.style.transform='translateY(-2px)'" onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)'" onclick="window.location='${paquete.linkUrl}'">
+                  ${paquete.linkTexto}
+                </button>
+              </div>
             </div>
           </div>
         `;
       });
 
       html += `
+          </div>
         </div>
       </div>
       `;

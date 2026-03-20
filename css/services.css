@@ -1,0 +1,233 @@
+/* css/services.css */
+body {
+    background-color: #fafafa;
+}
+
+.services-hero {
+    padding: 6rem 0 3rem;
+}
+
+.services-hero h1 {
+    font-family: 'montserrat', sans-serif;
+    color: #7f1300;
+    font-weight: 700;
+}
+
+.services-hero p.lead {
+    font-family: 'displayLight', sans-serif;
+    color: #555;
+    font-size: 1.25rem;
+}
+
+/* Category Banner */
+.category-section {
+    margin-bottom: 4rem;
+}
+
+.category-banner {
+    border-radius: 15px;
+    padding: 2.5rem 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.category-banner-icon {
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.85);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.category-banner-title {
+    font-family: 'montserrat', sans-serif;
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Plan Cards */
+.plan-card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(127, 19, 0, 0.15);
+}
+
+.plan-card.destacado {
+    border: 2px solid #7f1300;
+    transform: scale(1.03);
+    z-index: 10;
+    box-shadow: 0 10px 25px rgba(127, 19, 0, 0.1);
+}
+
+.plan-card.destacado:hover {
+    transform: scale(1.03) translateY(-8px);
+    box-shadow: 0 20px 40px rgba(127, 19, 0, 0.2);
+}
+
+.plan-card-header {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.plan-card.destacado .plan-card-header {
+    background-color: #7f1300;
+    color: white;
+}
+
+.plan-card-title {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 600;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.plan-card-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.plan-price {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.plan-features {
+    font-family: 'displayLight', sans-serif;
+    text-align: left;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.plan-features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #eee;
+    color: #555;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.plan-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #7f1300;
+    font-weight: bold;
+}
+
+.plan-features li:last-child {
+    border-bottom: none;
+}
+
+.btn-plan {
+    font-family: 'montserrat', sans-serif;
+    border-radius: 30px;
+    padding: 0.6rem 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-block !important;
+    flex-shrink: 0;
+}
+
+.btn-primary-custom {
+    background-color: #7f1300 !important;
+    color: #fff !important;
+    border: 2px solid #7f1300 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.btn-primary-custom:hover {
+    background-color: #9c1700;
+    color: #fff;
+    border: 2px solid #9c1700;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(127, 19, 0, 0.3);
+}
+
+.plan-card.destacado .btn-primary-custom {
+    background-color: #fff;
+    color: #7f1300;
+    border: 2px solid #fff;
+}
+
+.plan-card.destacado .btn-primary-custom:hover {
+    background-color: #f8f9fa;
+    color: #7f1300;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .services-hero {
+        padding: 3rem 0 1.5rem;
+    }
+    .services-hero h1 {
+        font-size: 1.8rem;
+    }
+    .services-hero p.lead {
+        font-size: 1rem;
+    }
+    .category-banner {
+        padding: 1.5rem 1rem;
+        border-radius: 10px;
+    }
+    .category-banner-icon {
+        font-size: 1.8rem;
+    }
+    .category-banner-title {
+        font-size: 1.4rem;
+    }
+    .category-section {
+        margin-bottom: 2.5rem;
+    }
+    .plan-card-title {
+        font-size: 1.2rem;
+    }
+    .plan-card-header {
+        padding: 1rem;
+    }
+    .plan-card-body {
+        padding: 1.2rem;
+    }
+    .plan-price {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    .plan-features li {
+        font-size: 0.9rem;
+        padding: 0.4rem 0;
+        padding-left: 1.2rem;
+    }
+    .btn-plan {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    .plan-card.destacado {
+        transform: scale(1);
+    }
+    .plan-card.destacado:hover {
+        transform: translateY(-5px);
+    }
+}
+

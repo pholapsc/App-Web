@@ -82,13 +82,13 @@ section {
 
 /* Tipografía */
 h2 {
-    font-size: 70px;
+    font-size: 2rem;
     font-family: montserrat;
-    color: #5EB916;
+    color: #333;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: displaylight;
 }
 
@@ -112,29 +112,63 @@ A {
 }
 
 /* Estilos para navegación Bootstrap */
-.nav-pills .nav-link,
-.show > .nav-pills .nav-link {
-    background-color: #fff;
-    text-decoration-color: #7e3131 !important;
-    border-radius: 40px !important;
-    border-color: black !important;
-    border-bottom-style: initial !important;
+.navbar .nav-link {
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    position: relative;
 }
 
-/* Estilos compartidos para hover y active */
-.footer-container,
-.nav-link:hover,
-.dropdown-item:hover,
-.nav-link:active,
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
+.navbar .nav-link:hover {
+    color: rgba(127, 19, 0, 1) !important;
+    background-color: rgba(127, 19, 0, 0.05);
+}
+
+.navbar .nav-link.active {
+    color: #fff !important;
+    background: rgba(127, 19, 0, 0.9) !important;
+    border-radius: 8px;
+}
+
+.dropdown-item {
+    font-family: 'displayLight', sans-serif;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    color: #444;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(127, 19, 0, 0.08) !important;
+    color: rgba(127, 19, 0, 1) !important;
+}
+
+/* Footer container */
+.footer-container {
     background: rgba(127, 19, 0, 0.76) !important;
     color: #fff !important;
     border-radius: 15px !important;
-    transform: scale(1,1);
-    transition: .15s linear !important;
 }
 
 iframe {
     border-style: none !important;
 }
+
+/* ===== MOBILE RESPONSIVE HEADER ===== */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        padding: 1rem 0;
+    }
+    .navbar .nav-link {
+        padding: 0.7rem 1rem !important;
+        text-align: center;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .navbar .nav-link:last-child {
+        border-bottom: none;
+    }
+    .dropdown-menu {
+        text-align: center;
+        border: none;
+        box-shadow: none !important;
+    }
+}

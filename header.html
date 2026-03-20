@@ -1,48 +1,65 @@
 <!DOCTYPE html>
-<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-  <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-    <svg class="bi me-2" width="60" height="50" style="background-image: url(./img/LogoPholapSC.png); background-repeat: no-repeat;  background-position: 50%; background-size: 65% auto;"></svg>
-    <span class="fs-2" style="font-family:Arial, Helvetica, sans-serif;">PholapSC</span>
-  </a>
-  <ul class="nav nav-pills nav-fill col-12 col-md-auto  justify-content-center " id="navbarNavDropdown">
-    <li class="nav-item"><a id="index" href="index.html" class="nav-link px-2 link-dark" aria-current="page">Inicio</a></li>
-    <li class="nav-item"><a id="services" href="services.html" class="nav-link px-2 link-dark">Servicios</a></li>
-    <li class="nav-item galery dropdown">
-      <a id="galery" class="nav-link px-1 dropdown-toggle link-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portafolio</a>
-      <ul class="dropdown-menu" aria-labelledby="galery">
-        <li><a class="dropdown-item" href="galery.html#Bodas">Bodas</a></li>
-        <li><a class="dropdown-item" href="galery.html#Estudio">Estudio</a></li>
-        <li><a class="dropdown-item" href="galery.html#Eventos">Eventos</a></li>
-        <li><a class="dropdown-item" href="galery.html#Retratos">Retratos</a></li>
-        <li><a class="dropdown-item" href="galery.html#Naturaleza">Naturaleza</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="galery.html">Ver Todo el Portafolio</a></li>
-      </ul>
-    </li>
-    <li class="nav-item about"><a id="about" href="about.html" class="nav-link px-2 link-dark">Nosotros</a></li>
-    <li class="nav-item contact"><a id="contact" href="contact.html" class="nav-link px-1 link-dark">Contacto</a></li>
-  </ul>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light py-3 border-bottom" style="background-color: #fff;">
+    <div class="container">
+      <!-- Brand Logo -->
+      <a class="navbar-brand d-flex align-items-center text-decoration-none" href="index.html">
+        <img src="./img/LogoPholapSC.png" alt="PholapSC" width="40" height="35" class="me-2" style="object-fit: contain;">
+        <span style="font-family: montserrat; font-weight: 700; font-size: 1.4rem; color: #333;">Pholap<span style="color: rgba(127, 19, 0, 1);">SC</span></span>
+      </a>
+
+      <!-- Hamburger Toggle for Mobile -->
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible Navigation -->
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav align-items-center gap-1" id="navbarNavDropdown">
+          <li class="nav-item">
+            <a id="index" href="index.html" class="nav-link px-3" aria-current="page" style="font-family: montserrat; font-size: 0.9rem; font-weight: 600; color: #444;">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a id="services" href="services/" class="nav-link px-3" style="font-family: montserrat; font-size: 0.9rem; font-weight: 600; color: #444;">Servicios</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a id="galery" class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-family: montserrat; font-size: 0.9rem; font-weight: 600; color: #444;">Portafolio</a>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" aria-labelledby="galery" id="portfolio-dropdown-menu" style="border-radius: 12px; overflow: hidden;">
+              <li><a class="dropdown-item" href="galery/">Ver Todo el Portafolio</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a id="about" href="about/" class="nav-link px-3" style="font-family: montserrat; font-size: 0.9rem; font-weight: 600; color: #444;">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a id="contact" href="contact/" class="nav-link px-3" style="font-family: montserrat; font-size: 0.9rem; font-weight: 600; color: #444;">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>
 <script>
   function filename() {
-    var rutaAbsoluta = self.location.href;
-    var posicionUltimaBarra = rutaAbsoluta.lastIndexOf("/");
-    var rutaRelativa = rutaAbsoluta.substring(posicionUltimaBarra + 1);
-    return rutaRelativa;
+    var path = self.location.pathname;
+    // Clean URLs: detect folder name
+    var parts = path.split('/').filter(function(p) { return p; });
+    var lastPart = parts[parts.length - 1] || '';
+    return lastPart;
   }
 
   var nombre_archivo = filename();
 
   // Marcar como activo el enlace correspondiente a la página actual
-  if (nombre_archivo == "index.html" || nombre_archivo == "") {
+  if (nombre_archivo == "index.html" || nombre_archivo == "" || nombre_archivo == "App-Web") {
     document.getElementById("index").className += " active";
-  } else if (nombre_archivo == "services.html") {
+  } else if (nombre_archivo == "services") {
     document.getElementById("services").className += " active";
-  } else if (nombre_archivo == "galery.html") {
+  } else if (nombre_archivo == "galery") {
     document.getElementById("galery").className += " active";
-  } else if (nombre_archivo == "about.html") {
+  } else if (nombre_archivo == "about") {
     document.getElementById("about").className += " active";
-  } else if (nombre_archivo == "contact.html") {
+  } else if (nombre_archivo == "contact") {
     document.getElementById("contact").className += " active";
   }
 </script>

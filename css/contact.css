@@ -1,0 +1,192 @@
+/* css/contact.css */
+body {
+    background-color: #fafafa;
+}
+
+/* Contact Hero Section */
+.contact-hero {
+    padding: 5rem 0 3rem;
+    background-color: transparent;
+    color: #333;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-hero h1 {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: rgba(127, 19, 0, 1);
+    margin-bottom: 1rem;
+}
+
+.contact-hero p {
+    font-family: 'displayLight', sans-serif;
+    color: #555;
+    font-size: 1.25rem;
+}
+
+/* Contact Layout */
+.contact-section {
+    margin-bottom: 5rem;
+}
+
+.contact-info-box {
+    background: #1a1a1a;
+    color: white;
+    border-radius: 20px;
+    padding: 3rem;
+    height: 100%;
+    box-shadow: 0 15px 40px rgba(127, 19, 0, 0.15);
+    background-image: linear-gradient(135deg, #1a1a1a 0%, #2e0700 100%);
+}
+
+.contact-info-title {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-right: 1.5rem;
+    width: 30px;
+    text-align: center;
+}
+
+.contact-text-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label {
+    font-family: 'montserrat', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 1px;
+    margin-bottom: 0.2rem;
+}
+
+.contact-text {
+    font-family: 'displayLight', sans-serif;
+    font-size: 1.1rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-text:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Contact Form */
+.contact-form-wrapper {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    height: 100%;
+}
+
+.form-title {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 700;
+    color: rgba(127, 19, 0, 1);
+    margin-bottom: 2rem;
+}
+
+.form-control, .form-select {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 0.8rem 1rem;
+    font-family: 'displayLight', sans-serif;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: rgba(127, 19, 0, 0.5);
+    box-shadow: 0 0 0 0.25rem rgba(127, 19, 0, 0.1);
+}
+
+.form-label {
+    font-family: 'montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.btn-submit {
+    font-family: 'montserrat', sans-serif;
+    border-radius: 30px;
+    padding: 1rem 2.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    background-color: rgba(127, 19, 0, 1);
+    color: white;
+    border: none;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover {
+    background-color: #9c1700;
+    color: white;
+    box-shadow: 0 5px 15px rgba(127, 19, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .contact-hero {
+        padding: 3rem 0 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+    .contact-hero p {
+        font-size: 1rem;
+    }
+    .contact-info-box {
+        padding: 2rem 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .contact-info-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .contact-icon {
+        font-size: 1.2rem;
+    }
+    .contact-text {
+        font-size: 0.95rem;
+    }
+    .contact-label {
+        font-size: 0.75rem;
+    }
+    .contact-form-wrapper {
+        padding: 2rem 1.5rem;
+    }
+    .form-title {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+    .btn-submit {
+        padding: 0.8rem 2rem;
+        font-size: 0.95rem;
+        width: 100%;
+    }
+    .contact-section {
+        margin-bottom: 3rem;
+    }
+}

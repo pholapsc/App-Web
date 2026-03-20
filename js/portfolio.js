@@ -4,7 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!filterContainer || !galleryContainer) return;
 
-  fetch("portfolio-data.json")
+  // Use the global basePath set by each HTML page
+  var base = (typeof basePath !== 'undefined') ? basePath : '';
+
+  fetch(base + "portfolio-data.json")
     .then(response => {
       if (!response.ok) {
         throw new Error("Cannot load JSON");
@@ -46,8 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Ensure standard categories always appear even if no images exist yet
-    const categories = new Set(["Bodas", "Estudio", "Eventos", "Retratos", "Naturaleza"]);
+    const categories = new Set();
     const items = [];
 
     // Parse folder structure: /img/portfolio/{Category}/{File}
