@@ -4,7 +4,7 @@
     "paquetes": [
       {
         "nombre": "Básico",
-        "precio": "$139.99",
+        "precio": "$199.99",
         "caracteristicas": [
           "20 fotos personalizadas (máximo detalle)",
           "50 fotos edición normal",
@@ -18,7 +18,7 @@
       },
       {
         "nombre": "Estándar",
-        "precio": "$219.99",
+        "precio": "$289.99",
         "caracteristicas": [
           "30 fotos personalizadas (máximo detalle)",
           "60-80 fotos edición normal",
@@ -32,7 +32,7 @@
       },
       {
         "nombre": "Premium",
-        "precio": "$249.99",
+        "precio": "$399.99",
         "caracteristicas": [
           "50 fotos personalizadas (máximo detalle)",
           "120-140 fotos edición normal",
@@ -51,7 +51,7 @@
     "paquetes": [
       {
         "nombre": "Básico",
-        "precio": "$99.99",
+        "precio": "$89.99",
         "caracteristicas": [
           "15 fotos personalizadas",
           "30 fotos edición normal",
@@ -77,7 +77,7 @@
       },
       {
         "nombre": "Premium",
-        "precio": "$199.99",
+        "precio": "$219.99",
         "caracteristicas": [
           "40 fotos personalizadas",
           "Todas las fotos en edición normal",
