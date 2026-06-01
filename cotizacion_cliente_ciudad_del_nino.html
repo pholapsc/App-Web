@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotización — Ciudad del Niño | PholapSC</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --vino: #7F1300;
+      --vino-light: rgba(127,19,0,0.08);
+      --vino-mid: rgba(127,19,0,0.15);
+      --gold: #B8960C;
+      --dark: #1a1a1a;
+      --gray: #666;
+      --light: #fafafa;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: var(--dark);
+      font-size: 13px;
+    }
+
+    /* ── PAGE ── */
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: #fff;
+      padding: 0;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: var(--vino);
+      padding: 28px 40px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .header-logo img {
+      height: 60px;
+      filter: brightness(0) invert(1);
+    }
+    .brand-name {
+      color: #fff;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .brand-tagline {
+      color: rgba(255,255,255,0.7);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+    .header-doc {
+      text-align: right;
+      color: #fff;
+    }
+    .doc-label {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0.95;
+    }
+    .doc-num {
+      font-size: 11px;
+      opacity: 0.7;
+      margin-top: 4px;
+    }
+
+    /* ── ACCENT BAR ── */
+    .accent-bar {
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold) 0%, var(--vino) 60%, #3a0800 100%);
+    }
+
+    /* ── BODY ── */
+    .body {
+      padding: 30px 40px;
+    }
+
+    /* ── INFO ROW ── */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .info-card {
+      background: var(--vino-light);
+      border-left: 3px solid var(--vino);
+      padding: 14px 16px;
+      border-radius: 0 6px 6px 0;
+    }
+    .info-card h4 {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--vino);
+      margin-bottom: 8px;
+    }
+    .info-card p {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .info-card .sub {
+      font-size: 11px;
+      color: var(--gray);
+      font-weight: 400;
+    }
+
+    /* ── SECTION TITLE ── */
+    .section-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--vino);
+      border-bottom: 1px solid var(--vino-mid);
+      padding-bottom: 6px;
+      margin-bottom: 16px;
+    }
+
+    /* ── TABLE ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 24px;
+    }
+    thead th {
+      background: var(--vino);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    thead th:last-child,
+    thead th:nth-child(3),
+    thead th:nth-child(4) { text-align: right; }
+
+    tbody tr:nth-child(even) { background: var(--vino-light); }
+    tbody td {
+      padding: 11px 12px;
+      font-size: 12px;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+    }
+    tbody td:last-child,
+    tbody td:nth-child(3),
+    tbody td:nth-child(4) { text-align: right; }
+
+    .service-name { font-weight: 600; color: var(--dark); }
+    .service-desc { font-size: 10px; color: var(--gray); margin-top: 2px; }
+
+    /* ── TOTALS ── */
+    .totals-wrap {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 30px;
+    }
+    .totals-box {
+      width: 280px;
+    }
+    .total-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 12px;
+    }
+    .total-row .label { color: var(--gray); }
+    .total-row .value { font-weight: 500; }
+    .total-row.grand {
+      background: var(--vino);
+      color: #fff;
+      padding: 12px 14px;
+      border-radius: 6px;
+      margin-top: 6px;
+      border-bottom: none;
+    }
+    .total-row.grand .label { color: rgba(255,255,255,0.8); font-weight: 600; font-size: 13px; }
+    .total-row.grand .value { font-size: 18px; font-weight: 700; }
+
+    /* ── NOTES ── */
+    .notes {
+      background: var(--vino-light);
+      border: 1px solid var(--vino-mid);
+      border-radius: 6px;
+      padding: 16px;
+      margin-bottom: 30px;
+    }
+    .notes h4 { font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--vino); text-transform: uppercase; margin-bottom: 8px; }
+    .notes ul { padding-left: 16px; }
+    .notes li { font-size: 11px; color: var(--gray); line-height: 1.8; }
+
+    /* ── GALLERY ── */
+    .gallery-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--vino);
+      border-bottom: 1px solid var(--vino-mid);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 30px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+    }
+    .gallery-caption {
+      font-size: 9px;
+      color: var(--gray);
+      text-align: center;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* ── PAYMENT / CONTACT ── */
+    .bottom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .bottom-card {
+      border: 1px solid var(--vino-mid);
+      border-radius: 6px;
+      padding: 14px 16px;
+    }
+    .bottom-card h4 {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--vino);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .bottom-card p {
+      font-size: 11px;
+      color: var(--gray);
+      line-height: 1.8;
+    }
+    .bottom-card strong { color: var(--dark); }
+
+    /* ── SIGNATURE ── */
+    .signature-area {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+    .sig-box { text-align: center; }
+    .sig-line {
+      border-top: 1px solid #aaa;
+      margin-bottom: 6px;
+      margin-top: 40px;
+    }
+    .sig-label { font-size: 10px; color: var(--gray); }
+    .sig-name { font-size: 11px; font-weight: 600; color: var(--dark); }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--vino);
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer p {
+      color: rgba(255,255,255,0.7);
+      font-size: 10px;
+    }
+    .footer .brand { color: #fff; font-weight: 700; font-size: 11px; letter-spacing: 1px; }
+
+    /* ── PRINT ── */
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .page { margin: 0; }
+      .no-print { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- PRINT BUTTON -->
+<div class="no-print" style="text-align:center; padding:16px; background:#f0f0f0;">
+  <button onclick="window.print()" style="background:#7F1300;color:#fff;border:none;padding:10px 28px;font-family:Montserrat,sans-serif;font-size:13px;border-radius:4px;cursor:pointer;font-weight:600;letter-spacing:1px;">
+    🖨 Imprimir / Guardar PDF
+  </button>
+</div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-logo">
+      <img src="img/LogoPholapSC.png" alt="PholapSC Logo" onerror="this.style.display='none'">
+      <div>
+        <div class="brand-name">PholapSC</div>
+        <div class="brand-tagline">Capturando momentos, contando historias</div>
+      </div>
+    </div>
+    <div class="header-doc">
+      <div class="doc-label">Cotización</div>
+      <div class="doc-num">N° COT-2023-001 &nbsp;|&nbsp; 08 de junio, 2023</div>
+    </div>
+  </div>
+  <div class="accent-bar"></div>
+
+  <div class="body">
+
+    <!-- INFO CLIENTE / PROVEEDOR -->
+    <div class="info-grid">
+      <div class="info-card">
+        <h4>Cliente</h4>
+        <p>CDI — Ciudad del Niño</p>
+        <p class="sub">Quito, Ecuador</p>
+        <p class="sub">Fecha de evento: 08 de junio, 2023</p>
+      </div>
+      <div class="info-card">
+        <h4>Proveedor</h4>
+        <p>PholapSC Fotografía</p>
+        <p class="sub">pholapsc@outlook.com</p>
+        <p class="sub">+593 96 386 1292</p>
+        <p class="sub">www.pholapsc.com</p>
+      </div>
+    </div>
+
+    <!-- DETALLE DE SERVICIO -->
+    <div class="section-title">Detalle del Servicio</div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width:40%">Servicio / Descripción</th>
+          <th style="width:20%">Formato</th>
+          <th style="width:15%">Cantidad</th>
+          <th style="width:25%">Precio Unit.</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="service-name">Fotografía Institucional</div>
+            <div class="service-desc">Sesión fotográfica para CDI — Ciudad del Niño<br>Incluye edición personalizada + impresión</div>
+          </td>
+          <td>13 × 18 cm</td>
+          <td>17 unidades</td>
+          <td>$3.50</td>
+          <td><strong>$59.50</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- TOTALES -->
+    <div class="totals-wrap">
+      <div class="totals-box">
+        <div class="total-row">
+          <span class="label">Subtotal</span>
+          <span class="value">$59.50</span>
+        </div>
+        <div class="total-row">
+          <span class="label">Descuento</span>
+          <span class="value">—</span>
+        </div>
+        <div class="total-row">
+          <span class="label">IVA (0%)</span>
+          <span class="value">$0.00</span>
+        </div>
+        <div class="total-row grand">
+          <span class="label">TOTAL A PAGAR</span>
+          <span class="value">$59.50</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOTAS -->
+    <div class="notes">
+      <h4>Términos y Condiciones</h4>
+      <ul>
+        <li>El precio incluye edición profesional de alta calidad y entrega impresa en formato 13×18 cm.</li>
+        <li>Tiempo de entrega estimado: 5–7 días hábiles tras la sesión.</li>
+        <li>Se requiere un anticipo del 50% para confirmar la reserva.</li>
+        <li>Cotización válida por 15 días calendario.</li>
+        <li>Para más información o reservas: WhatsApp +593 96 386 1292 o pholapsc@outlook.com.</li>
+      </ul>
+    </div>
+
+    <!-- GALERÍA DE MUESTRA -->
+    <div class="gallery-title">Muestra de Nuestro Trabajo</div>
+    <div class="gallery">
+      <img src="img/portfolio/Retratos/DSC00644.webp" alt="Retrato 1">
+      <img src="img/portfolio/Retratos/DSC00645.webp" alt="Retrato 2">
+      <img src="img/portfolio/Familiares/PHOTO (1).webp" alt="Familiar 1">
+      <img src="img/portfolio/Familiares/PHOTO (2).webp" alt="Familiar 2">
+    </div>
+    <p class="gallery-caption">Ejemplos de sesiones fotográficas profesionales realizadas por PholapSC — Quito, Ecuador</p>
+
+    <!-- PAGO Y CONTACTO -->
+    <div class="bottom-grid">
+      <div class="bottom-card">
+        <h4>Formas de Pago</h4>
+        <p>
+          <strong>Transferencia bancaria</strong><br>
+          <strong>Depósito en efectivo</strong><br>
+          <strong>Pago móvil / WhatsApp</strong><br><br>
+          50% anticipo al confirmar<br>
+          50% restante al entregar el trabajo
+        </p>
+      </div>
+      <div class="bottom-card">
+        <h4>Contáctanos</h4>
+        <p>
+          <strong>WhatsApp:</strong> +593 96 386 1292<br>
+          <strong>Email:</strong> pholapsc@outlook.com<br>
+          <strong>Web:</strong> www.pholapsc.com<br>
+          <strong>Instagram:</strong> @pholapSC<br>
+          <strong>TikTok / YouTube:</strong> PholapSC
+        </p>
+      </div>
+    </div>
+
+    <!-- FIRMAS -->
+    <div class="signature-area">
+      <div class="sig-box">
+        <div class="sig-line"></div>
+        <div class="sig-name">Cristhian Muñoz — PholapSC</div>
+        <div class="sig-label">Fotógrafo / Representante</div>
+      </div>
+      <div class="sig-box">
+        <div class="sig-line"></div>
+        <div class="sig-name">CDI — Ciudad del Niño</div>
+        <div class="sig-label">Firma de Aceptación del Cliente</div>
+      </div>
+    </div>
+
+  </div><!-- /body -->
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>
+      <span class="brand">PholapSC</span>
+      <p>© 2023 PholapSC. Todos los derechos reservados.</p>
+    </div>
+    <p>Quito, Ecuador &nbsp;|&nbsp; www.pholapsc.com &nbsp;|&nbsp; @pholapSC</p>
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>
